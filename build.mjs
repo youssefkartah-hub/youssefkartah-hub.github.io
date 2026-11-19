@@ -85,7 +85,7 @@ function rowMedia(p, root) {
   if (m.type === 'figure') {
     return `<div class="row-media draw" role="img" aria-label="${esc(m.alt)}">{{include ${m.include}}}</div>`;
   }
-  return `<div class="row-media">${pic({ src: m.src, alt: m.alt, sizes: '(min-width: 900px) 42vw, 100vw' }, root)}</div>`;
+  return `<div class="row-media${m.fit === 'contain' ? ' contain' : ''}">${pic({ src: m.src, alt: m.alt, sizes: '(min-width: 900px) 42vw, 100vw' }, root)}</div>`;
 }
 
 function projectRows(root) {

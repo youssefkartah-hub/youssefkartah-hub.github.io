@@ -99,8 +99,9 @@
       ],
       "media": {
         "type": "image",
-        "src": "marv-3d-top.png",
-        "alt": "Top view of the M.A.R.V. quadcopter CAD model with labels for the flight computer, battery, radios, camera, magnetic grabber, four motors and seven-inch propellers"
+        "src": "marv-cad.png",
+        "fit": "contain",
+        "alt": "3D CAD model of the M.A.R.V. quadcopter in color: four motors with blue seven-inch propellers on a black carbon-fiber frame, the flight computer stacked on top, four landing legs, and the purple magnetic payload grabber hanging underneath"
       },
       "og": "og-marv.jpg",
       "result": {

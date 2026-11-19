@@ -27,6 +27,7 @@ function visual(p) {
   const m = p.media;
   if (m.type === 'figure') return `<div class="draw">${fig(m.include)}</div>`;
   const stem = (m.type === 'video' ? m.poster : m.src).replace(/\.[^.]+$/, '');
+  if (m.fit === 'contain') return `<div class="draw">${img(stem)}</div>`;
   return img(stem, p.slug === 'uav-builds' ? '38% 50%' : '50% 40%');
 }
 
@@ -47,6 +48,7 @@ function card({ kicker, title, line, vis, home }) {
   .r img{width:100%;height:100%;object-fit:cover}
   .draw{position:absolute;inset:0;display:grid;place-items:center;padding:34px 60px;background:#fff}
   .draw svg{width:100%;height:auto;max-height:100%}
+  .draw img{width:100%;height:100%;object-fit:contain}
   .draw .duo{width:100%}
   .draw .chartcard{width:100%}
   .draw .readout{display:none}
